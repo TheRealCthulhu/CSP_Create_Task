@@ -4,7 +4,7 @@
 
 
 #### Todo:
-- [ ] Main Screen
+- [x] Main Screen
 - [ ] Clear Function (GeneralCode.py in Practice CT)
 - [x] Test Colored Text
 - [ ] Design Animations
