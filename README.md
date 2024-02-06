@@ -5,7 +5,9 @@
 
 #### Todo:
 - [x] Main Screen
-- [ ] Clear Function (GeneralCode.py in Practice CT)
+- [x] Clear Function (GeneralCode.py in Practice CT)
 - [x] Test Colored Text
 - [ ] Design Animations
 - [ ] Look at old project for ideas
+- [ ] Driving Home Function
+- [ ] Keep driving for secret achievement
