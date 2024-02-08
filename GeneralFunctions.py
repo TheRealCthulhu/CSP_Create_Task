@@ -6,3 +6,6 @@ def Clear(t=0):
 
 def Wait(t=1):
   time.sleep(t)
+
+def NL():
+  print("\n")

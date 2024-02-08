@@ -525,29 +525,57 @@ def Driving():
     print("".rjust(209))
     print("".rjust(209))
     Clear(.025)
-    if Vars.DriveCount == 0:
+    if Vars.DriveCount == 0 and "drivenToMadness" not in Achievements.Unlocked:
       print("You hear strange noises coming from a house nearby.".center(210))
       print("Keep Driving / Investigate / Go Home".center(210))
+      ConDrive(1)
+    elif Vars.DriveCount == 0 and "drivenToMadness" in Achievements.Unlocked:
+      print("You hear strange noises coming from a house nearby.".center(210))
+      print("Investigate / Go Home".center(210))
+      ConDrive(2)
     elif Vars.DriveCount <= 3:
       print("Keep Driving / Go Home".center(210))
+      ConDrive(3)
     elif Vars.DriveCount < 5:
       print("Keep Driving".center(210))
-    elif Vars.DriveCount == 5:
+      ConDrive(4)
+    elif Vars.DriveCount == 5 and "drivenToMadness" not in Achievements.Unlocked:
+      Vars.ToDrive = False
+      Vars.HasSave = True
+      Vars.DriveCount = 0
       print("ACHIEVEMENT GET".center(210))
       print("DRIVEN TO MADNESS".center(210))
       Achievements.Unlocked.append("drivenToMadness")
       Wait(2)
-      Vars.HasSave = True
       StaticImages.MainMenuImage()
+
       
-    ContinueDriving = input("".rjust(193//2)).lower()
-    if ContinueDriving == "keep driving" or ContinueDriving == "drive":
-      Vars.DriveCount += 1
-    elif ContinueDriving == "go home" or ContinueDriving == "home":
-      Vars.ToDrive = False
-    elif ContinueDriving == "investigate":
-      Vars.ToDrive = False
-    elif ContinueDriving == "skip":
-      Vars.DriveCount = 5
+      
     
-    
+def ConDrive(x):
+    ContinueDriving = input(" ".rjust(193//2)).lower()
+    if x == 1:
+      if ContinueDriving == "keep driving" or ContinueDriving == "drive":
+        Vars.DriveCount += 1
+      elif ContinueDriving == "go home" or ContinueDriving == "home":
+        Vars.ToDrive = False
+        StaticImages.HomeImage()
+      elif ContinueDriving == "investigate":
+        Vars.ToDrive = False
+      elif ContinueDriving == "skip":
+        Vars.DriveCount = 5
+    elif x == 2:
+      if ContinueDriving == "go home" or ContinueDriving == "home":
+        Vars.ToDrive = False
+        StaticImages.HomeImage()
+      elif ContinueDriving == "investigate":
+        Vars.ToDrive = False
+    elif x == 3:
+      if ContinueDriving == "keep driving" or ContinueDriving == "drive":
+        Vars.DriveCount += 1
+      elif ContinueDriving == "go home" or ContinueDriving == "home":
+        Vars.ToDrive = False
+        StaticImages.HomeImage()
+    elif x == 4:
+      if ContinueDriving == "keep driving" or ContinueDriving == "drive":
+        Vars.DriveCount += 1

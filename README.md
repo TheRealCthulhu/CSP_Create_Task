@@ -10,4 +10,5 @@
 - [ ] Design Animations
 - [ ] Look at old project for ideas
 - [ ] Driving Home Function
-- [ ] Keep driving for secret achievement
+- [x] Keep driving for secret achievement
+- [x] Sleep Tight Achievement
