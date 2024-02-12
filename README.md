@@ -7,8 +7,8 @@
 - [x] Main Screen
 - [x] Clear Function (GeneralCode.py in Practice CT)
 - [x] Test Colored Text
-- [ ] Design Animations
-- [ ] Look at old project for ideas
-- [ ] Driving Home Function
+- [x] Design Animations
+- [x] Look at old project for ideas
+- [x] Driving Home Function
 - [x] Keep driving for secret achievement
 - [x] Sleep Tight Achievement

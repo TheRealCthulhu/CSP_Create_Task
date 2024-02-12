@@ -17,8 +17,29 @@ def AchievementDisplay():
   else:
     print(f"{Color.GREEN}Sleep Tight{Color.OFF}")
     print("What house?")
-  
-  
+  NL()
+  if "itBegins" not in Unlocked:
+    print(f"{BgColor.RED}???{BgColor.OFF}")
+    print("???")
+  else:
+    print(f"{Color.GREEN}And so it Begins{Color.OFF}")
+    print("Welcome to The House")
+  NL()
+  if "theEnd?" not in Unlocked:
+    print(f"{BgColor.RED}???{BgColor.OFF}")
+    print("???")
+  else:
+    print(f"{Color.GREEN}The End?{Color.OFF}")
+    print("That's it? For now...")
+    
+  '''NL()
+  if "welcomeHome" not in Unlocked:
+    print(f"{BgColor.RED}???{BgColor.OFF}")
+    print("???")
+  else:
+    print(f"{Color.GREEN}Welcome Home{Color.OFF}")
+    print("No wonder it felt familiar")
+  '''
   
   
   
